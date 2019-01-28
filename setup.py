@@ -9,9 +9,10 @@ setup(
     author='Yuma Mihira',
     url='https://github.com/yuma-m/pypop',
     license='MIT',
-    packages=find_packages(exclude=['test']),
     install_requires=[
         'attrs',
         'pychord',
-    ]
+    ],
+    packages=find_packages(exclude=['test']),
+    long_description=open('README.rst').read(),
 )
