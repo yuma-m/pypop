@@ -1,0 +1,25 @@
+dist: xenial
+language: python
+python:
+  - "3.6"
+  - "3.7"
+
+install:
+  - pip install .
+
+script:
+  - python setup.py test
+
+before_deploy:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y pandoc
+  - pandoc -f markdown -t rst -o README.rst README.md
+
+deploy:
+  provider: pypi
+  user: yuma-m
+  password:
+    secure: dGnMD8xotjS9KHOPaUHTnhjOVOCwLlTcdvWP3BtcZ+2NzDZBCMFpXWV97kxbnnJih+hNYHfahN/LDnK1/3eIxUMyeg0wJu3pWKLgA8SkFQ+yiOsrq8TggOSZCKkDUn9sbIs0YkDxuCVfRttzcIjHqd2JYgYCfccKik1iUXhKXmPkrssfUywUAE7gowbec6iJ896oF8wwiIrs9dkBtD4sXdo45o/BEnSFp8ftiqY06HIkPjBSGfSZVYvuAcuPxJKm3XO9c0eLab59bHWVxcrNBT3adI7J4PJrXylRlI6oRf+QAG5l1XYtKU1UzfVjYS24liNTUMjnMOkErdO/YuyftpUR26/0NcIFSfiplqcEdQ0dJvxFXnkos9qyveYnnQVTqSqfhZqhoHVMniockMpCV5tBioM0ub8IaWVlGG0P8pnEz80fypwosxhK9gk17fYJajs56vKvXd255EbjJp4M4Q4Ue+6upHiG+Hb4W2GHmXvlI+g04+9VtwQnk3AzPUR4f7ZVhaOCYhslFt2xoaM7A89546dcT6spa6FXmf5imWWltbu0a4dC4rWVmBjDIDZs6asNwepln0cRzKebJB7wmjqZZPnvh2MEzqQBnNKLkVIQJUKWTLADdb2Pvipeq0kWKfy4Q1R54oNulehOQF3H1kwz1KWe6ZkiSlu4XMz9DqU=
+  on:
+    python: 3.6
+    tags: true
