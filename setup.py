@@ -15,4 +15,13 @@ setup(
     ],
     packages=find_packages(exclude=['test']),
     long_description=open('README.rst').read(),
+    classifiers=[
+        "Development Status :: 2 - Pre-Alpha",
+        "Environment :: Console",
+        "Intended Audience :: Developers",
+        "Natural Language :: English",
+        "Operating System :: OS Independent",
+        "Topic :: Multimedia :: Sound/Audio",
+        "License :: OSI Approved :: MIT License",
+    ],
 )
