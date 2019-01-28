@@ -9,6 +9,7 @@ setup(
     author='Yuma Mihira',
     url='https://github.com/yuma-m/pypop',
     license='MIT',
+    python_requires='>=3.6',
     install_requires=[
         'attrs',
         'pychord',

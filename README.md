@@ -5,12 +5,14 @@ A python library to compose pop songs automatically.
 
 ```bash
 # Use python3.6 or above
-$ python3 setup.py install
+$ pip3 install pypop
 ```
 
-## Example
+## Try Example
 
 ```bash
+$ git clone git@github.com:yuma-m/pypop.git
+$ cd pypop
 $ python3 example.py
 ```
 
