@@ -1,4 +1,4 @@
-# pypop [![Build Status](https://travis-ci.org/yuma-m/pypop.svg?branch=master)](https://travis-ci.org/yuma-m/pypop)
+# pypop [![Build Status](https://travis-ci.com/yuma-m/pypop.svg?branch=master)](https://travis-ci.com/yuma-m/pypop)
 A python library to compose pop songs automatically.
 
 ## Installation
